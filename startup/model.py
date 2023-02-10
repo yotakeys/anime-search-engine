@@ -26,7 +26,7 @@ class AnimeRecommender():
         results =  [self.fetch_anime(idx) for idx in result_id]
         return results
     
-    def recommender(self, query, top_k):
+    def recommend(self, query, top_k = 5):
         self.top_k = top_k
         self.query = query
         
@@ -39,4 +39,4 @@ class AnimeRecommender():
     
 if __name__ == '__main__':
     recommender = AnimeRecommender()
-    recommender.recommender(query = "Anime about isekai using sword", top_k = 5)
+    recommender.recommend(query = "Anime about isekai using sword", top_k = 5)
